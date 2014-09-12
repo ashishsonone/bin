@@ -1,0 +1,15 @@
+if [ "$1" = "btp" ]
+then
+    cd /home/ashish/Dropbox/ACADS/sem7/BTP-VM
+    echo "going to BTP\n"
+elif [ "$1" = "ta" ]
+then
+    cd /home/ashish/Dropbox/ACADS/sem7/networks\ TA
+    echo "going to Networks TA"
+elif [ "$1" = "tr" ]
+then
+    cd ~/.local/share/Trash/files/
+    echo "going to trash folder"
+else
+    echo "wrong code"
+fi
