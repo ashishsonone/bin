@@ -32,3 +32,11 @@ mynm : my network manager shortcuts on ubuntu
     h0 : stops hotspot using ap-hotspot
     h1 : starts hotspot using ap-hotspot
     d : configures br0 interface using dhcp
+
+------------------------
+
+find home directory with  just username
+$ echo ~ashishsonone
+/users/ug11/ashishsonone
+
+
