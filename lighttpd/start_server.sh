@@ -1,1 +1,1 @@
-lighttpd -f config
+lighttpd -D -f config
