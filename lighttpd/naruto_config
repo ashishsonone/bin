@@ -10,7 +10,7 @@ server.modules = (
 cgi.assign      = ( ".cgi" => "" )
 
 server.port                     = 8001
-server.document-root            = "/media/N/OnePieceDC++"
+server.document-root            = "/media/N/Naruto"
 server.errorlog                 = "/dev/stdout"
 server.dir-listing              = "enable"
 dir-listing.encoding            = "utf-8"
