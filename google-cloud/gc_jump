@@ -1,0 +1,13 @@
+if [ "$1" = "t" ]
+then
+    gcloud config set account ashish@trumplab.com
+    gcloud config set project node-1189
+    echo "using ashish@trumplab.com with node-1189"
+elif [ "$1" = "p" ]
+then
+    gcloud config set account ashish@preppo.in
+    gcloud config set project preppo-1223
+    echo "using ashish@preppo.in with preppo-1223"
+else
+    echo "wrong code"
+fi
