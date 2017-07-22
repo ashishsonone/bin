@@ -1,12 +1,16 @@
 #!/usr/bin/python
 import subprocess
 import re
+import sys
+DEBUG = False
+if len(sys.argv) > 1:
+    if sys.argv[1] == '-d':
+        DEBUG = True
 
 proc = subprocess.Popen(["git tag -l"], stdout=subprocess.PIPE, shell=True)
 (out, err) = proc.communicate()
 
 tags = out.splitlines()
-print(tags)
 
 def tag_value(tag):
     tag = re.sub('[^\\d\\.]', '', tag)
@@ -20,4 +24,7 @@ def tag_value(tag):
     return value
     
 tags.sort(key=tag_value)
-print(tags[-1])
+if DEBUG:
+    print(tags)
+print('#tags : {}'.format(len(tags)))
+print('#highest : {}'.format(tags[-1]))
