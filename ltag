@@ -15,6 +15,7 @@ tags = out.splitlines()
 def tag_value(tag):
     tag = re.sub('[^\\d\\.]', '', tag)
     parts = tag.split('.')
+    parts = [x for x in parts if len(x.strip()) > 0]
     places = [int(float(x)) for x in parts]
     value = 0
     place_value = 1
