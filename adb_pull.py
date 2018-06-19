@@ -12,12 +12,12 @@ src = sys.argv[1]
 pattern = sys.argv[2]
 dest = sys.argv[3]
 
-print(src, pattern, dest)
+print(src, ' | ', pattern, ' | ', dest)
 
 if src[-1] != '/':
   src = src + '/'
 
-command = "adb shell ls '{}' | grep -e '{}'".format(src, pattern)
+command = "adb shell \"ls '{}'\" | grep -e '{}'".format(src, pattern)
 print(command)
 files = os.popen(command).read()
 files = files.split('\n')
@@ -30,7 +30,7 @@ for fname in files:
 
   command = "adb pull '{}{}' '{}'".format(src, fname, dest)
   print(command)
-  os.popen(command).read()
+  r = os.popen(command).read()
   success += 1
 
 print('Finished pulling {} files'.format(success))
